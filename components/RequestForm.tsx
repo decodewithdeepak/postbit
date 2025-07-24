@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, Minus, Send, Loader2 } from 'lucide-react';
+import { Plus, Minus, Forward, SendHorizontal, Loader2 } from 'lucide-react';
 import { RequestData, ResponseData, HttpMethod } from '@/types';
 
 const HTTP_METHODS: HttpMethod[] = [
@@ -78,7 +78,7 @@ export default function RequestForm({ onSendRequest, loading }: Props) {
     <Card className="h-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Send className="h-5 w-5" />
+          <Forward className="h-5 w-5" />
           Request
         </CardTitle>
       </CardHeader>
@@ -188,7 +188,7 @@ export default function RequestForm({ onSendRequest, loading }: Props) {
               </>
             ) : (
               <>
-                <Send className="mr-2 h-4 w-4" />
+                <SendHorizontal className="mr-2 h-4 w-4" />
                 Send Request
               </>
             )}
